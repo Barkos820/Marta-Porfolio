@@ -56,23 +56,89 @@
             </p>
 
             <div class="tab-titles">
-              <p class="tab-links active-link">Experience</p>
-              <p class="tab-links">Licenses</p>
+              <p class="tab-links active-link" onclick="opentab('experience')">
+                Experience
+              </p>
+              <p class="tab-links" onclick="opentab('licenses')">Licenses</p>
             </div>
-            <div class="tab-contents active-tab">
+            <div class="tab-contents active-tab" id="experience">
               <ul>
-                <li><span>Oct 2023 - Current</span><br>CEO & PT at "MPower, Health and Training"</li>
+                <li>
+                  <span>Oct 2023 - Current</span><br />CEO & PT at "MPower,
+                  Health and Training"
+                </li>
               </ul>
             </div>
-            <div class="tab-contents">
+            <div class="tab-contents" id="licenses">
               <ul>
-                <li><span>May 2023</span><br>EREPS EQF Level 4</li>
+                <li><span>May 2023</span><br />EREPS EQF Level 4</li>
               </ul>
             </div>
-            
           </div>
         </div>
       </div>
     </div>
+
+    <!-- ------portfolio------- -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h2>My Work</h2>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work1.jpg" alt="document" />
+            <div class="layer">
+              <h3>1st Article</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work2.jpg" alt="document" />
+            <div class="layer">
+              <h3>2st Article</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work3.jpg" alt="document" />
+            <div class="layer">
+              <h3>3st Article</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <a href="#"
+                ><i class="fa-solid fa-arrow-up-right-from-square"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/284d5402f7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
