@@ -13,8 +13,8 @@ img {
 }
 
 body {
-  background: #080808;
-  color: white;
+  background: #242423;
+  color: #cfdbd5;
 }
 
 #header {
@@ -48,7 +48,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: white;
+    color: #cfdbd5;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -58,7 +58,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: red;
+    background: #f5cb5c;
     position: absolute;
     left: 1px;
     bottom: -6px;
@@ -84,7 +84,7 @@ transition: 0.5s;
 
 #about {
     padding: 80px 0px;
-    color: gray;
+    color: #cfdbd5;
 }
 
 .row{
@@ -109,7 +109,7 @@ transition: 0.5s;
 .about-col-2 h2{
   font-size: 60px;
   font-weight: 600;
-  color: white;
+  color: #cfdbd5;
 }
 
 .tab-titles{
@@ -129,14 +129,31 @@ transition: 0.5s;
   content: '';
   width: 0;
   height: 3px;
-  background: red;
-  /* position: absolute; */
-  left: 1;
+  background: #f5cb5c;
+  position: absolute;
+  left: 0;
   bottom: -8px;
   transition: 0.5s;
 }
 
-.tab-links.active-link::before{
+.tab-links.active-link::after{
   width: 50%;
 }
 
+.tab-contents ul li{
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span{
+  color: #f5cb5c;
+  font-size: 14px;
+}
+
+.tab-contents{
+  display: none;
+}
+
+.tab-contents.active-tab{
+  display: block;
+}
