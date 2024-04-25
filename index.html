@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marta Portfolio</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://kit.fontawesome.com/284d5402f7.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div id="header">
       <div class="container">
         <nav>
           <img src="images/logo.webp" alt="icon" class="logo" />
-          <ul>
+          <ul id="side-menu">
             <li>
               <a href="#">Home</a>
             </li>
@@ -24,7 +25,9 @@
             <li>
               <a href="#">Contact</a>
             </li>
+            <i class="fa-solid fa-xmark fas" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars fas" onclick="openmenu()"></i>
         </nav>
         <div class="header-text">
           <p>Personal Trainer</p>
@@ -42,7 +45,7 @@
             <img src="images/aboutme.jpg" alt="photo-of-trainer" />
           </div>
           <div class="about-col-2">
-            <h2>About Me</h2>
+            <h2 class="sub-title">About Me</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
               Vestibulum lobortis turpis et est ultricies, eget vulputate nunc
@@ -83,7 +86,7 @@
 
     <div id="portfolio">
       <div class="container">
-        <h2>My Work</h2>
+        <h2 class="sub-title">My Work</h2>
         <div class="work-list">
           <div class="work">
             <img src="images/work1.jpg" alt="document" />
@@ -120,25 +123,45 @@
       </div>
     </div>
 
-    <script>
-      var tablinks = document.getElementsByClassName("tab-links");
-      var tabcontents = document.getElementsByClassName("tab-contents");
+    <!-- --------Contact-------- -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h2 class="sub-title">Contact Me</h2>
+            <p><i class="fa-solid fa-envelope"></i>contact@exempel.com</p>
+            <p><i class="fa-solid fa-phone"></i>123456789</p>
+            <div class="social-icon">
+              <a href="https://www.instagram.com/mpowerhealthandtraining/">
+                <i class="fa-brands fa-square-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@martakoscielniak1?lang=en">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+          <div class="contact-right">
+            <form>
+              <input type="text" name="Name" placeholder="Your Name" required />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your Email"
+                required
+              />
+              <textarea
+                type="Message"
+                rows="6"
+                placeholder="Your Message"
+              ></textarea>
+              <button type="submit" class="btn btn2">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
-      function opentab(tabname) {
-        for (tablink of tablinks) {
-          tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
-          tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-      }
+    <script src="index.js">
     </script>
-
-    <script
-      src="https://kit.fontawesome.com/284d5402f7.js"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
